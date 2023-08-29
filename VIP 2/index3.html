@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider automatic</title>
+</head>
+<script>
+    var i = 0,j=0;
+    var images = [];
+    var time = 2000;
+
+    images[0] = "https://wallpapercave.com/wp/5t2A8TW.jpg";
+    images[1] = "https://images7.alphacoders.com/330/330515.jpg";
+    images[2] = "https://i.pinimg.com/originals/11/dd/e7/11dde72e93140477a65961ff0696ed83--diy-hair-wallpaper-backgrounds.jpg"
+    images[3] = "https://imgs.search.brave.com/nqu_KExf6jvBE9-uBwHhfYnGz7yIPu1jiECWQdkjOEo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bGF0ZXN0YW5pbWVu/ZXdzLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMy8wOC9i/bGVhY2gtdHlidy1l/cGlzb2RlLTIwLWUu/cG5n"
+    images[4] = "https://imgs.search.brave.com/vKbMteQMeXaP_bwVDn3k-p2_NOSYP6yu3g9kYgWgmY8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGV4ZXJ0by5jb20v/Y2RuLWNnaS9pbWFn/ZS93aWR0aD0zODQw/LHF1YWxpdHk9NzUs/Zm9ybWF0PWF1dG8v/aHR0cHM6Ly9lZGl0/b3JzLmRleGVydG8u/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzA3LzEwL2Js/ZWFjaC10eWJ3Lmpw/ZWc"
+
+    function changeImg() {
+        document.slide.src = images[i];
+        document.getElementById("counter").textContent = j;j+=2;
+        if (i < images.length - 1) {
+            i++;
+        } else {
+            i = 0;
+        }
+        setTimeout(changeImg, time); // Pass the function reference
+    }
+
+    window.onload = changeImg; // Start the slideshow when the window loads
+</script>
+<body>    
+    <h1 style="padding: 2px;text-align: center;"> AUTOMATIC IMAGE SLIDER  counter:<span id="counter">0</span></span></h1>
+    <div style="padding-left: 30%;">
+    <img name="slide" alt="" width="500" height="500">
+    </div>
+</body>
+</html>

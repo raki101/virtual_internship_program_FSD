@@ -1,0 +1,48 @@
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+#header{
+    background-color: pink;
+    margin: 0;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+#slider-images{
+    height:100%;
+    position:absolute;
+    left: 20%;
+}
+#images{
+    height: 70%;
+    width: 100%;
+    padding: 40px;
+    
+}
+#left,#right{
+    background: #eee;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#right{
+
+    right: 0;
+}
+.size{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    padding-top: 20px;
+}
+
+.carousel-inner{
+    padding-left: 300px;
+}
+

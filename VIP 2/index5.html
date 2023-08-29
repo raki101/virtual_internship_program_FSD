@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var count = 0;
+    function trigger() {
+        var visib;
+        
+        if (count === 0) {
+            visib = "hidden";
+            count = 1;
+        } else {
+            visib = "visible";
+            count = 0;
+        }
+        
+        document.getElementById("para").style.visibility = visib;
+    }
+</script>
+<body>
+    <div></div>
+    <h1>PARAGRAPH VISIBILITY</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit itaque doloremque, vero ducimus ea libero recusandae incidunt et suscipit non est quidem, neque eos repellat, optio ratione dolorem illum natus omnis quia blanditiis distinctio? Nostrum natus consectetur deserunt temporibus assumenda esse doloribus rerum molestiae aut, non officia vero magni consequatur, beatae nesciunt porro dolorem eius iure reiciendis aliquid aspernatur omnis quo! Earum, aut veniam? Nam aut, vitae dolorum ipsum dolor fuga, earum quasi sed minus qui cumque iusto nisi. Quasi vero iure quia commodi asperiores in, omnis nisi deleniti dicta nihil excepturi facilis fuga id ut expedita, aspernatur aperiam molestias.</p>
+    <button onclick="trigger()">change visibility</button>
+</body>
+</html>
